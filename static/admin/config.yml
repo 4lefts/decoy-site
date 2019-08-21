@@ -1,0 +1,138 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# display_url: https://elegant-lichterman-cc3ce6.netlify.com
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: pages
+    folder: src/main-pages
+    create: false
+    fields:
+      - { label: layout, name: layout, widget: hidden }
+      - { label: title, name: title, widget: string }
+      - { label: navTitle, name: navTitle, widget: hidden }
+      - { label: collection, name: collection, widget: hidden, default: pages }
+      - { label: order, name: order, widget: hidden }
+      - { label: permalink, name: permalink, widget: hidden, default: true }
+      - {
+          label: table of contents,
+          name: toc,
+          widget: boolean,
+          default: false,
+        }
+      - { label: order, name: order, widget: hidden, valueType: int, min: 1 }
+      - { label: body, name: body, widget: markdown }
+  - name: about-us
+    label: about-us
+    folder: src/about-us
+    create: true
+    fields:
+      - { label: layout, name: layout, widget: hidden }
+      - { label: title, name: title, widget: string }
+      - {
+          label: collection,
+          name: collection,
+          widget: hidden,
+          default: about-us,
+        }
+      - {
+          label: table of contents,
+          name: toc,
+          widget: boolean,
+          default: false,
+        }
+      - { label: body, name: body, widget: markdown }
+  - name: governors
+    label: governors
+    files:
+      - label: our-governors
+        name: our-governors
+        file: src/governors/governors.md
+        fields:
+          - { label: layout, name: layout, widget: hidden }
+          - { label: title, name: title, widget: string }
+          - {
+              label: collection,
+              name: collection,
+              widget: hidden,
+              default: about-us,
+            }
+          - {
+              label: table of contents,
+              name: toc,
+              widget: boolean,
+              default: false,
+            }
+          - label: People
+            name: people
+            widget: list
+            fields:
+              - { label: Description, name: description, widget: string }
+              - { label: Picture, name: picture, widget: image }
+          - { label: body, name: body, widget: markdown }
+
+  - name: information
+    label: information
+    folder: src/information
+    create: true
+    fields:
+      - { label: layout, name: layout, widget: hidden }
+      - { label: title, name: title, widget: string }
+      - {
+          label: collection,
+          name: collection,
+          widget: hidden,
+          default: information,
+        }
+      - {
+          label: table of contents,
+          name: toc,
+          widget: boolean,
+          default: false,
+        }
+      - { label: body, name: body, widget: markdown }
+  - name: parents
+    label: parents
+    folder: src/parents
+    create: true
+    fields:
+      - { label: layout, name: layout, widget: hidden }
+      - { label: title, name: title, widget: string }
+      - {
+          label: collection,
+          name: collection,
+          widget: hidden,
+          default: parents,
+        }
+      - {
+          label: table of contents,
+          name: toc,
+          widget: boolean,
+          default: false,
+        }
+      - { label: body, name: body, widget: markdown }
+  - name: year groups
+    label: year groups
+    folder: src/year-groups
+    create: false
+    fields:
+      - { label: layout, name: layout, widget: hidden }
+      - { label: title, name: title, widget: string }
+      - {
+          label: collection,
+          name: collection,
+          widget: hidden,
+          default: year-groups,
+        }
+      - {
+          label: table of contents,
+          name: toc,
+          widget: boolean,
+          default: true,
+        }
+      - { label: body, name: body, widget: markdown }
