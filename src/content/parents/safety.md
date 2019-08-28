@@ -29,35 +29,19 @@ The following videos are led by David Wright, Director of the UK Safer Internet 
 
 ### BOOST Parents: An Introduction to Online Safety Pt1
 
-<div class="fluid-video">
-    <div>
-        <iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-1.mp4"></iframe>
-    </div>
-</div>
+<iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-1.mp4" width="560" height="319" frameborder="0"></iframe>
 
 ### BOOST Parents: An Introduction to Online Safety Pt2
 
-<div class="fluid-video">
-    <div>
-        <iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-2.mp4"></iframe>
-    </div>
-</div>
+<iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-2.mp4" width="560" height="319" frameborder="0"></iframe>
 
 ### BOOST Parents: An Introduction to Online Safety Pt3
 
-<div class="fluid-video">
-    <div>
-        <iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-3.mp4"></iframe>
-    </div>
-</div>
+<iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-3.mp4" width="560" height="319" frameborder="0"></iframe>
 
 ### BOOST Parents: An Introduction to Online Safety Pt4
 
-<div class="fluid-video">
-    <div>
-        <iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-4.mp4"></iframe>
-    </div>
-</div>
+<iframe src="https://boost.swgfl.org.uk/assets/embed.php?f=assets%2Fvideos%2Fboost-parents-an-introduction-to-online-safety-part-4.mp4" width="560" height="319" frameborder="0"></iframe>
 
 ## Resources for Children
 

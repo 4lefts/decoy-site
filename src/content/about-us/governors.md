@@ -1,7 +1,7 @@
 ---
 template: grid-page
 title: School Governors
-toc: true
+toc: false
 people:
   - description: Keith Moore, Chair
     picture: /images/people/govs/keith-moore.jpg
@@ -37,13 +37,4 @@ people:
 
 Details of the make-up of our governing body can be found [here](/uploads/Summary-Governor-Information-171017.pdf). All Governors can be contacted through the Clerk to Governors, Mr Peter Osborne - <a href="mailto:posborne@decoyschool.co.uk">posborne@decoyschool.co.uk</a>.
 
-## a title
-
-## another title
-
-<!-- <div class="buttons-grid">
-    <info-btn
-        href="https://drive.google.com/folderview?id=0B0102cki14zKM1V0bDRJZVFyRmM&usp=sharing"
-        text="Governors Information">
-    </info-btn>
-</div> -->
+[Governors Information](https://drive.google.com/folderview?id=0B0102cki14zKM1V0bDRJZVFyRmM&usp=sharing){.btn}

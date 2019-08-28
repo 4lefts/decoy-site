@@ -34,6 +34,8 @@ module.exports = {
           },
           `gatsby-remark-component`,
           `gatsby-remark-autolink-headers`,
+          `gatsby-remark-attr`,
+          `gatsby-remark-responsive-iframe`,
         ],
       },
     },
