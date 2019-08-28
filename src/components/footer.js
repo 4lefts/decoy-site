@@ -1,16 +1,29 @@
 import React from "react"
 import styled from "styled-components"
+import { rhythm } from "../utils/typography"
 
 const FooterOuter = styled.div`
-  background: #2e7d32;
+  background: #00c853;
   color: white;
   margin: 0;
   padding: 0;
+  @supports (display: grid) {
+    grid-column: 1/-1;
+    grid-row: 3;
+  }
 `
 
 const FooterInner = styled.footer`
   max-width: 960px;
   margin: 0 auto;
+  padding-top: ${rhythm(1)};
+  a {
+    color: white;
+    &:hover {
+      color: #004d20;
+    }
+    transition: color 0.4s ease-in-out;
+  }
 `
 
 export default () => (
@@ -20,9 +33,11 @@ export default () => (
         © {new Date().getFullYear()}, Decoy Community Primary School.
         <br />
         Deer Park Road, Newton Abbot, TQ12 1DH
-        <br />
+      </p>
+      <p>
         <a href="tel:+441626353282">01626 353 282</a>
-        <br />
+      </p>
+      <p>
         <a href="mailto:admin@decoyschool.co.uk">admin@decoyschool.co.uk</a>.
       </p>
     </FooterInner>

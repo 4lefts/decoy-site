@@ -21,6 +21,12 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfig: `src/utils/typography`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

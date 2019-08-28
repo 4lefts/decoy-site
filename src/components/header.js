@@ -3,26 +3,36 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import Navigation from "./navigation"
+import { rhythm } from "../utils/typography"
 
 const HeaderContainer = styled.div`
-  background: #2e7d32;
-  color: white;
+  background: #00c853;
   margin: 0;
   padding: 0;
+  @supports (display: grid) {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
 `
 
 const HeaderInner = styled.header`
   max-width: 960px;
+  padding: ${rhythm(1)} 0;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  h1 a {
+  a {
     color: white;
     text-decoration: none;
     &:hover {
-      color: yellow;
+      color: #004d20;
+    }
+    h1 {
+      font-weight: 700;
+      margin: 0;
+      transition: color 0.4s ease-in-out;
     }
   }
 `
@@ -30,9 +40,9 @@ const HeaderInner = styled.header`
 const Header = ({ siteTitle }) => (
   <HeaderContainer>
     <HeaderInner>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
+      <Link to="/">
+        <h1>{siteTitle}</h1>
+      </Link>
       <Navigation />
     </HeaderInner>
   </HeaderContainer>
