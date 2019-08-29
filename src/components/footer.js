@@ -9,7 +9,7 @@ const FooterOuter = styled.div`
   padding: 0;
   @supports (display: grid) {
     grid-column: 1/-1;
-    grid-row: 3;
+    grid-row: 4;
   }
 `
 
@@ -35,9 +35,10 @@ export default () => (
         Deer Park Road, Newton Abbot, TQ12 1DH
       </p>
       <p>
-        <a href="tel:+441626353282">01626 353 282</a>
+        Telephone: <a href="tel:+441626353282">01626 353 282</a>
       </p>
       <p>
+        E-mail:{" "}
         <a href="mailto:admin@decoyschool.co.uk">admin@decoyschool.co.uk</a>.
       </p>
     </FooterInner>

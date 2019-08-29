@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 const TableOfContents = styled.div`
   padding-bottom: ${rhythm(1)};

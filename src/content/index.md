@@ -1,6 +1,7 @@
 ---
 title: Welcome to Decoy Community Primary School
-template: default
+template: homepage
+banner: /uploads/banner.jpg
 toc: false
 ---
 

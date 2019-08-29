@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 import Header from "./header"
+import Logos from "./logos"
 import Footer from "./footer"
 import "./reset.css"
 
@@ -19,7 +20,7 @@ const Page = styled.div`
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 960px) 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto auto;
   }
 `
 
@@ -49,6 +50,7 @@ const Layout = ({ children }) => {
     <Page>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Main>{children}</Main>
+      <Logos />
       <Footer />
     </Page>
   )
