@@ -16,7 +16,7 @@ const FooterOuter = styled.div`
 const FooterInner = styled.footer`
   max-width: 960px;
   margin: 0 auto;
-  padding-top: ${rhythm(1)};
+  padding: ${rhythm(1)} 10px 10px 10px;
   a {
     color: white;
     &:hover {
@@ -30,7 +30,7 @@ export default () => (
   <FooterOuter>
     <FooterInner>
       <p>
-        © {new Date().getFullYear()}, Decoy Community Primary School.
+        © {new Date().getFullYear()}, Decoy Community Primary School
         <br />
         Deer Park Road, Newton Abbot, TQ12 1DH
       </p>

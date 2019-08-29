@@ -12,7 +12,7 @@ import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.css"
+import "./reset.css"
 
 const Page = styled.div`
   @supports (display: grid) {
@@ -26,7 +26,7 @@ const Page = styled.div`
 const Main = styled.main`
   max-width: 960px;
   margin: 0 auto;
-  padding-top: ${rhythm(2)};
+  padding: ${rhythm(2)} 10px;
   @supports (display: grid) {
     margin: 0;
     grid-column: 2;

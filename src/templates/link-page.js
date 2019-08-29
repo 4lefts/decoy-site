@@ -5,32 +5,17 @@ import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Uniform from "../components/uniform"
+import TableOfContents from "../components/tableOfContents"
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: { uniform: Uniform },
 }).Compiler
 
-const TableOfContents = styled.div`
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 ${rhythm(2)} 0;
-    a {
-      color: #009423;
-      font-style: italic;
-      &:hover,
-      &:active {
-        color: #004d20;
-      }
-    }
-  }
-`
-
 const LinkGrid = styled.div`
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 10px;
   }
 `
@@ -80,12 +65,7 @@ export default ({ data }) => {
       <div>
         <h1>{content.frontmatter.title}</h1>
         {content.frontmatter.toc && (
-          <>
-            <h3>What's on this page?</h3>
-            <TableOfContents
-              dangerouslySetInnerHTML={{ __html: content.tableOfContents }}
-            />
-          </>
+          <TableOfContents html={content.tableOfContents} />
         )}
         <Content>{renderAst(content.htmlAst)}</Content>
         {content.frontmatter.searchable && <div>Search box will be here.</div>}

@@ -1,31 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
 import rehypeReact from "rehype-react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Uniform from "../components/uniform"
+import TableOfContents from "../components/tableOfContents"
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: { uniform: Uniform },
 }).Compiler
-
-const TableOfContents = styled.div`
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 ${rhythm(2)} 0;
-    a {
-      color: #009423;
-      font-style: italic;
-      &:hover,
-      &:active {
-        color: #004d20;
-      }
-    }
-  }
-`
 
 const PeopleGrid = styled.div`
   display: flex;
@@ -78,12 +62,7 @@ export default ({ data }) => {
       <div>
         <h1>{content.frontmatter.title}</h1>
         {content.frontmatter.toc && (
-          <>
-            <h3>What's on this page?</h3>
-            <TableOfContents
-              dangerouslySetInnerHTML={{ __html: content.tableOfContents }}
-            />
-          </>
+          <TableOfContents html={content.tableOfContents} />
         )}
         <Content>{renderAst(content.htmlAst)}</Content>
         <People people={content.frontmatter.people} />
