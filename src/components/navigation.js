@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { rhythm } from "../utils/typography"
+import menu from "../images/icons/menu.svg"
+import close from "../images/icons/close.svg"
 
 const NavContent = () => (
   <>
@@ -104,7 +106,6 @@ const NarrowNavContent = styled.nav`
     }
   }
   button {
-    cursor: pointer;
     align-self: flex-end;
     margin: ${rhythm(0.67)} 10px;
   }
@@ -129,6 +130,20 @@ const NarrowNavContent = styled.nav`
     }
   }
 `
+const IconButton = styled.button`
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin: 0;
+    width: 28px;
+    height: 28px;
+  }
+`
 
 class NarrowNav extends React.Component {
   constructor() {
@@ -148,17 +163,17 @@ class NarrowNav extends React.Component {
   render() {
     return (
       <NarrowNavContainer>
-        <button onClick={() => this.setState({ menuIsOpen: true })}>
-          menu
-        </button>
+        <IconButton onClick={() => this.setState({ menuIsOpen: true })}>
+          <img src={menu} alt="open menu button" />
+        </IconButton>
         <NarrowNavContent
           className={
             this.state.menuIsOpen ? "menu-content open" : "menu-content"
           }
         >
-          <button onClick={() => this.setState({ menuIsOpen: false })}>
-            close
-          </button>
+          <IconButton onClick={() => this.setState({ menuIsOpen: false })}>
+            <img src={close} alt="close menu button" />
+          </IconButton>
           {this.props.children}
         </NarrowNavContent>
       </NarrowNavContainer>
