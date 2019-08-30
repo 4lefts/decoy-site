@@ -1,15 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import rehypeReact from "rehype-react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import Uniform from "../components/uniform"
+import Content from "../components/content"
 import TableOfContents from "../components/tableOfContents"
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: { uniform: Uniform },
-}).Compiler
 
 const PeopleGrid = styled.div`
   display: flex;
@@ -45,16 +39,6 @@ const People = props => (
   </PeopleGrid>
 )
 
-const Content = styled.div`
-  a {
-    color: #009423;
-    &:hover,
-    &:active {
-      color: #004d20;
-    }
-  }
-`
-
 export default ({ data }) => {
   const content = data.markdownRemark
   return (
@@ -64,7 +48,7 @@ export default ({ data }) => {
         {content.frontmatter.toc && (
           <TableOfContents html={content.tableOfContents} />
         )}
-        <Content>{renderAst(content.htmlAst)}</Content>
+        <Content htmlAst={content.htmlAst} />
         <People people={content.frontmatter.people} />
       </div>
     </Layout>

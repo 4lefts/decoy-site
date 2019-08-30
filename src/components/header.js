@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 
 const HeaderContainer = styled.div`
-  background: #00c853;
+  background: #009624;
   margin: 0;
   padding: 0;
   @supports (display: grid) {
@@ -27,12 +27,12 @@ const HeaderInner = styled.header`
     color: white;
     text-decoration: none;
     &:hover {
-      color: #004d20;
+      color: #ffd600;
     }
     h1 {
       font-weight: 700;
       margin: 0;
-      transition: color 0.4s ease-in-out;
+      transition: color 0.3s ease;
     }
   }
   @media screen and (max-width: 580px) {
@@ -47,19 +47,24 @@ const Nav = styled.nav`
   h4 {
     display: inline;
     font-weight: 700;
-    margin-left: 15px;
+    padding: 0 10px;
+    border-right: 2px solid white;
     &:first-child {
-      margin-left: 0;
+      border-left: 2px solid white;
     }
     a {
       text-decoration: none;
       &:hover {
-        color: #004d20;
+        color: #ffd600;
+        &.active {
+          border-color: #ffd600;
+        }
       }
       &.active {
-        border-bottom: 1px solid white;
+        /* border-bottom: 1px solid white; */
+        color: #ffd600;
       }
-      transition: color 0.4s ease-in-out;
+      transition: all 0.3s ease;
     }
   }
 `

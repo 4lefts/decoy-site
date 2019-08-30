@@ -1,16 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import rehypeReact from "rehype-react"
 import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import Uniform from "../components/uniform"
+import Content from "../components/content"
 import TableOfContents from "../components/tableOfContents"
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: { uniform: Uniform },
-}).Compiler
 
 const LinkGrid = styled.div`
   @supports (display: grid) {
@@ -33,6 +27,13 @@ const LinkBtn = styled.a`
     font-weight: 700px;
     margin: 0;
   }
+  &:hover {
+    background: #ffd600;
+    h3 {
+      color: #004d20;
+    }
+  }
+  transition: all 0.3s ease;
   @supports (display: grid) {
     margin-bottom: 0;
   }
@@ -48,16 +49,6 @@ const Links = props => (
   </LinkGrid>
 )
 
-const Content = styled.div`
-  a {
-    color: #009423;
-    &:hover,
-    &:active {
-      color: #004d20;
-    }
-  }
-`
-
 export default ({ data }) => {
   const content = data.markdownRemark
   return (
@@ -67,7 +58,7 @@ export default ({ data }) => {
         {content.frontmatter.toc && (
           <TableOfContents html={content.tableOfContents} />
         )}
-        <Content>{renderAst(content.htmlAst)}</Content>
+        <Content htmlAst={content.htmlAst} />
         {content.frontmatter.searchable && <div>Search box will be here.</div>}
         <Links links={content.frontmatter.links} />
       </div>

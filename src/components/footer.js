@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 
 const FooterOuter = styled.div`
-  background: #00c853;
+  background: #009624;
   color: white;
   margin: 0;
   padding: 0;
@@ -20,9 +20,9 @@ const FooterInner = styled.footer`
   a {
     color: white;
     &:hover {
-      color: #004d20;
+      color: #ffd600;
     }
-    transition: color 0.4s ease-in-out;
+    transition: color 0.3s ease;
   }
 `
 
