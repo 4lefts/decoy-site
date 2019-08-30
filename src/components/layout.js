@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import { rhythm } from "../utils/typography"
 import Header from "./header"
 import Logos from "./logos"
 import Footer from "./footer"
@@ -25,12 +24,9 @@ const Page = styled.div`
 `
 
 const Main = styled.main`
-  max-width: 960px;
-  margin: 0 auto;
-  padding: ${rhythm(2)} 10px;
   @supports (display: grid) {
     margin: 0;
-    grid-column: 2;
+    grid-column: 1/4;
     grid-row: 2;
   }
 `

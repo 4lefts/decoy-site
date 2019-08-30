@@ -87,7 +87,12 @@ export default () => (
   <LogosOuter>
     <Logos>
       {Images.map(image => (
-        <Imagelink src={image.src} alt={image.alt} href={image.href} />
+        <Imagelink
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          href={image.href}
+        />
       ))}
     </Logos>
   </LogosOuter>

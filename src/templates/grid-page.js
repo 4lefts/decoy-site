@@ -3,9 +3,10 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Content from "../components/content"
-import TableOfContents from "../components/tableOfContents"
 
 const PeopleGrid = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
@@ -44,11 +45,11 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>{content.frontmatter.title}</h1>
-        {content.frontmatter.toc && (
-          <TableOfContents html={content.tableOfContents} />
-        )}
-        <Content htmlAst={content.htmlAst} />
+        <Content
+          title={content.frontmatter.title}
+          tocHtml={content.frontmatter.toc ? content.tableOfContents : null}
+          htmlAst={content.htmlAst}
+        />
         <People people={content.frontmatter.people} />
       </div>
     </Layout>

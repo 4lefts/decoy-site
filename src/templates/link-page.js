@@ -4,9 +4,10 @@ import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Content from "../components/content"
-import TableOfContents from "../components/tableOfContents"
 
 const LinkGrid = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
   @supports (display: grid) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -54,11 +55,11 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>{content.frontmatter.title}</h1>
-        {content.frontmatter.toc && (
-          <TableOfContents html={content.tableOfContents} />
-        )}
-        <Content htmlAst={content.htmlAst} />
+        <Content
+          title={content.frontmatter.title}
+          tocHtml={content.frontmatter.toc ? content.tableOfContents : null}
+          htmlAst={content.htmlAst}
+        />
         {content.frontmatter.searchable && <div>Search box will be here.</div>}
         <Links links={content.frontmatter.links} />
       </div>

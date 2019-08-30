@@ -2,18 +2,17 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Content from "../components/content"
-import TableOfContents from "../components/tableOfContents"
 
 export default ({ data }) => {
   const content = data.markdownRemark
   return (
     <Layout>
       <div>
-        <h1>{content.frontmatter.title}</h1>
-        {content.frontmatter.toc && (
-          <TableOfContents html={content.tableOfContents} />
-        )}
-        <Content htmlAst={content.htmlAst} />
+        <Content
+          title={content.frontmatter.title}
+          tocHtml={content.frontmatter.toc ? content.tableOfContents : null}
+          htmlAst={content.htmlAst}
+        />
       </div>
     </Layout>
   )
