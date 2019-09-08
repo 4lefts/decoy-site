@@ -37,4 +37,6 @@ people:
 
 Details of the make-up of our governing body can be found [here](/uploads/Summary-Governor-Information-171017.pdf). All Governors can be contacted through the Clerk to Governors, Mr Peter Osborne - <a href="mailto:posborne@decoyschool.co.uk">posborne@decoyschool.co.uk</a>.
 
-[Governors Information](https://drive.google.com/folderview?id=0B0102cki14zKM1V0bDRJZVFyRmM&usp=sharing){.btn}
+[Governors Information](https://drive.google.com/folderview?id=0B0102cki14zKM1V0bDRJZVFyRmM&usp=sharing)
+
+<linkbtn text="Governors Information" address="https://drive.google.com/folderview?id=0B0102cki14zKM1V0bDRJZVFyRmM&usp=sharing"></linkbtn>

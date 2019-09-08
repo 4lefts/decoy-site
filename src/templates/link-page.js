@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 import styled from "styled-components"
+import LinkBtn from "../components/linkbtn"
 import Layout from "../components/layout"
 import Content from "../components/content"
 
@@ -15,37 +16,10 @@ const LinkGrid = styled.div`
   }
 `
 
-const LinkBtn = styled.a`
-  display: block;
-  text-decoration: none;
-  background: #009624;
-  padding: ${rhythm(0.67)} 1em;
-  border-radius: 5px;
-  margin-bottom: ${rhythm(0.33)};
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
-  h3 {
-    color: white;
-    font-weight: 700px;
-    margin: 0;
-  }
-  &:hover {
-    background: #ffd600;
-    h3 {
-      color: #004d20;
-    }
-  }
-  transition: all 0.3s ease;
-  @supports (display: grid) {
-    margin-bottom: 0;
-  }
-`
-
 const Links = props => (
   <LinkGrid>
     {props.links.map(link => (
-      <LinkBtn href={link.address}>
-        <h3>{link.text}</h3>
-      </LinkBtn>
+      <LinkBtn address={link.address} text={link.text} />
     ))}
   </LinkGrid>
 )
