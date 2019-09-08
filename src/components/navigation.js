@@ -51,6 +51,11 @@ const WideNav = styled.nav`
     a {
       color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
+      &:link,
+      &:visited,
+      &:active {
+        color: rgba(255, 255, 255, 0.85);
+      }
       &:hover {
         color: white;
       }
@@ -108,6 +113,7 @@ const NarrowNavContent = styled.nav`
     margin: ${rhythm(0.67)} 10px;
   }
   h4 {
+    color: white;
     font-weight: 700;
     padding: ${rhythm(0.3)} 10px;
     width: 100%;
@@ -115,6 +121,12 @@ const NarrowNavContent = styled.nav`
     border-bottom: 2px solid white;
     a {
       text-decoration: none;
+      text-decoration-color: white;
+      &:link,
+      &:visited,
+      &:active {
+        color: white;
+      }
       &:hover {
         color: #ffd600;
         &.active {

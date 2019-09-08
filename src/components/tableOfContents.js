@@ -9,10 +9,15 @@ const TableOfContents = styled.div`
     a {
       color: #009423;
       font-style: italic;
+      &:link,
+      &:visited {
+        color: #009423;
+      }
       &:hover,
       &:active {
         color: #004d20;
       }
+      transition: all 0.3s ease-in-out;
     }
 
     ul {
