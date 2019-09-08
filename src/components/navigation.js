@@ -36,9 +36,9 @@ const WideNav = styled.nav`
     font-weight: 700;
     margin: 0;
     padding: 0 10px;
-    border-right: 2px solid white;
+    border-right: 2px solid rgba(255, 255, 255, 0.85);
     &:first-child {
-      border-left: 2px solid white;
+      border-left: 2px solid rgba(255, 255, 255, 0.85);
     }
     @media screen and (max-width: 960px) {
       &:first-child {
@@ -49,12 +49,10 @@ const WideNav = styled.nav`
       }
     }
     a {
+      color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
       &:hover {
-        color: #ffd600;
-        &.active {
-          border-color: #ffd600;
-        }
+        color: white;
       }
       &.active {
         color: #ffd600;

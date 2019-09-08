@@ -1,6 +1,6 @@
 ---
-template: grid-page
 title: School Governors
+template: grid-page
 toc: false
 people:
   - description: Keith Moore, Chair

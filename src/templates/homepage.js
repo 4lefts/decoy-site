@@ -9,11 +9,7 @@ export default ({ data }) => {
     <Layout>
       <div>
         <img src={content.frontmatter.banner} alt="banner" />
-        <Content
-          title={content.frontmatter.title}
-          tocHtml={content.frontmatter.toc ? content.tableOfContents : null}
-          htmlAst={content.htmlAst}
-        />
+        <Content title={content.frontmatter.title} htmlAst={content.htmlAst} />
       </div>
     </Layout>
   )
@@ -26,7 +22,6 @@ export const query = graphql`
       frontmatter {
         banner
         title
-        toc
       }
       tableOfContents(maxDepth: 3)
     }

@@ -2,7 +2,6 @@
 title: Welcome to Decoy Community Primary School
 template: homepage
 banner: /uploads/banner.jpg
-toc: false
 ---
 
 On behalf of the children, staff, and governors I should like to welcome you to Decoy Primary School.

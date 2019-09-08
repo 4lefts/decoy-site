@@ -25,15 +25,15 @@ const HeaderInner = styled.header`
   justify-content: space-between;
   align-items: center;
   a {
-    color: white;
     text-decoration: none;
+  }
+  h1 {
+    font-weight: 700;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease;
     &:hover {
-      color: #ffd600;
-    }
-    h1 {
-      font-weight: 700;
-      margin: 0;
-      transition: color 0.3s ease;
+      color: white;
     }
   }
 `
