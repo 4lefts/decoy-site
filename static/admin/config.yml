@@ -12,25 +12,25 @@ collections:
     name: pages
     files:
       - label: "Home Page"
-      - name: index
-      - file: src/content/index.md
-      - fields:
+        name: index
+        file: src/content/index.md
+        fields:
           - { label: title, name: title, widget: string }
           - { label: template, name: template, widget: hidden }
           - { label: banner, name: banner, widget: image }
           - { label: body, name: body, widget: markdown }
       - label: "404"
-      - name: 404
-      - file: src/content/404.md
-      - fields:
+        name: 404
+        file: src/content/404.md
+        fields:
           - { label: title, name: title, widget: string }
           - { label: template, name: template, widget: hidden }
           - { label: table of contents, name: toc, widget: hidden }
           - { label: body, name: body, widget: markdown }
       - label: "About Us"
-      - name: about-us
-      - file: src/content/about-us.md
-      - fields:
+        name: about-us
+        file: src/content/about-us.md
+        fields:
           - { label: title, name: title, widget: string }
           - { label: template, name: template, widget: hidden }
           - { label: table of contents, name: toc, widget: hidden }
@@ -43,17 +43,17 @@ collections:
               - { label: text, name: text, widget: string }
               - { label: address, name: address, widget: string }
       - label: "Contact"
-      - name: contact
-      - file: src/content/contact.md
-      - fields:
+        name: contact
+        file: src/content/contact.md
+        fields:
           - { label: title, name: title, widget: string }
           - { label: template, name: template, widget: hidden }
           - { label: table of contents, name: toc, widget: hidden }
           - { label: body, name: body, widget: markdown }
       - label: "Information"
-      - name: information
-      - file: src/content/information.md
-      - fields:
+        name: information
+        file: src/content/information.md
+        fields:
           - { label: title, name: title, widget: string }
           - { label: template, name: template, widget: hidden }
           - { label: table of contents, name: toc, widget: hidden }
@@ -66,9 +66,9 @@ collections:
               - { label: text, name: text, widget: string }
               - { label: address, name: address, widget: string }
       - label: "Parents"
-      - name: parents
-      - file: src/content/parents.md
-      - fields:
+        name: parents
+        file: src/content/parents.md
+        fields:
           - { label: title, name: title, widget: string }
           - { label: template, name: template, widget: hidden }
           - { label: table of contents, name: toc, widget: hidden }
