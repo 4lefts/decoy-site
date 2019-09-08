@@ -13,6 +13,9 @@ const LinkGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 10px;
+    a {
+      margin: 0; /* so buttons aren't too spread out, unlike those inline */
+    }
   }
 `
 
