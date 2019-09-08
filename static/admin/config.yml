@@ -14,29 +14,29 @@ collections:
       - label: "Home Page"
       - name: index
       - file: src/content/index.md
-      - fields: 
-        - { label: title, name: title, widget: string }
-        - { label: template, name: template, widget: hidden }
-        - { label: banner, name: banner, widget: image }
-        - { label: body, name: body, widget: markdown }
+      - fields:
+          - { label: title, name: title, widget: string }
+          - { label: template, name: template, widget: hidden }
+          - { label: banner, name: banner, widget: image }
+          - { label: body, name: body, widget: markdown }
       - label: "404"
       - name: 404
       - file: src/content/404.md
       - fields:
-        - { label: title, name: title, widget: string }
-        - { label: template, name: template, widget: hidden }
-        - { label: table of contents, name: toc, widget: hidden }
-        - { label: body, name: body, widget: markdown }
+          - { label: title, name: title, widget: string }
+          - { label: template, name: template, widget: hidden }
+          - { label: table of contents, name: toc, widget: hidden }
+          - { label: body, name: body, widget: markdown }
       - label: "About Us"
       - name: about-us
       - file: src/content/about-us.md
       - fields:
-        - { label: title, name: title, widget: string }
-        - { label: template, name: template, widget: hidden }
-        - { label: table of contents, name: toc, widget: hidden }
-        - { label: searchable, name: searchable, widget: hidden }
-        - { label: body, name: body, widget: markdown }
-        - label: links
+          - { label: title, name: title, widget: string }
+          - { label: template, name: template, widget: hidden }
+          - { label: table of contents, name: toc, widget: hidden }
+          - { label: searchable, name: searchable, widget: hidden }
+          - { label: body, name: body, widget: markdown }
+          - label: links
             name: links
             widget: list
             fields:
@@ -46,20 +46,20 @@ collections:
       - name: contact
       - file: src/content/contact.md
       - fields:
-        - { label: title, name: title, widget: string }
-        - { label: template, name: template, widget: hidden }
-        - { label: table of contents, name: toc, widget: hidden }
-        - { label: body, name: body, widget: markdown }
+          - { label: title, name: title, widget: string }
+          - { label: template, name: template, widget: hidden }
+          - { label: table of contents, name: toc, widget: hidden }
+          - { label: body, name: body, widget: markdown }
       - label: "Information"
       - name: information
       - file: src/content/information.md
       - fields:
-        - { label: title, name: title, widget: string }
-        - { label: template, name: template, widget: hidden }
-        - { label: table of contents, name: toc, widget: hidden }
-        - { label: searchable, name: searchable, widget: hidden }
-        - { label: body, name: body, widget: markdown }
-        - label: links
+          - { label: title, name: title, widget: string }
+          - { label: template, name: template, widget: hidden }
+          - { label: table of contents, name: toc, widget: hidden }
+          - { label: searchable, name: searchable, widget: hidden }
+          - { label: body, name: body, widget: markdown }
+          - label: links
             name: links
             widget: list
             fields:
@@ -69,12 +69,12 @@ collections:
       - name: parents
       - file: src/content/parents.md
       - fields:
-        - { label: title, name: title, widget: string }
-        - { label: template, name: template, widget: hidden }
-        - { label: table of contents, name: toc, widget: hidden }
-        - { label: searchable, name: searchable, widget: hidden }
-        - { label: body, name: body, widget: markdown }
-        - label: links
+          - { label: title, name: title, widget: string }
+          - { label: template, name: template, widget: hidden }
+          - { label: table of contents, name: toc, widget: hidden }
+          - { label: searchable, name: searchable, widget: hidden }
+          - { label: body, name: body, widget: markdown }
+          - label: links
             name: links
             widget: list
             fields:
@@ -113,11 +113,11 @@ collections:
       - { label: table of contents, name: toc, widget: boolean, default: false }
       - { label: body, name: body, widget: markdown }
       - label: people
-            name: people
-            widget: list
-            fields:
-              - { label: Description, name: description, widget: string }
-              - { label: Picture, name: picture, widget: image }
+        name: people
+        widget: list
+        fields:
+          - { label: Description, name: description, widget: string }
+          - { label: Picture, name: picture, widget: image }
   - name: information
     label: information
     folder: src/content/information
@@ -138,11 +138,11 @@ collections:
       - { label: template, name: template, widget: hidden }
       - { label: table of contents, name: toc, widget: boolean, default: false }
       - label: links
-            name: links
-            widget: list
-            fields:
-              - { label: text, name: text, widget: string }
-              - { label: address, name: address, widget: string }
+        name: links
+        widget: list
+        fields:
+          - { label: text, name: text, widget: string }
+          - { label: address, name: address, widget: string }
       - { label: body, name: body, widget: markdown }
       - { label: searchable, name: searchable, widget: boolean, default: false }
   - name: parents
