@@ -9,7 +9,7 @@ public_folder: /uploads
 
 collections:
   - label: "Main Pages"
-    name: pages
+    name: main-pages
     files:
       - label: "Home Page"
         name: index
@@ -20,7 +20,7 @@ collections:
           - { label: banner, name: banner, widget: image }
           - { label: body, name: body, widget: markdown }
       - label: "404"
-        name: 404
+        name: "404"
         file: src/content/404.md
         fields:
           - { label: title, name: title, widget: string }
@@ -80,18 +80,6 @@ collections:
             fields:
               - { label: text, name: text, widget: string }
               - { label: address, name: address, widget: string }
-    folder: src/content
-    create: false
-    fields:
-      - { label: layout, name: layout, widget: hidden }
-      - { label: title, name: title, widget: string }
-      - { label: navTitle, name: navTitle, widget: hidden }
-      - { label: collection, name: collection, widget: hidden, default: pages }
-      - { label: order, name: order, widget: hidden }
-      - { label: permalink, name: permalink, widget: hidden, default: true }
-      - { label: table of contents, name: toc, widget: boolean, default: false }
-      - { label: order, name: order, widget: hidden, valueType: int, min: 1 }
-      - { label: body, name: body, widget: markdown }
   - name: about-us
     label: about-us
     folder: src/content/about-us
