@@ -31,12 +31,14 @@ const NavContent = () => (
 )
 
 const WideNav = styled.nav`
+  padding: ${rhythm(0.67)} 0;
   h4 {
     display: inline;
     font-weight: 700;
     margin: 0;
     padding: 0 10px;
-    border-right: 2px solid rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    /* border-right: 2px solid rgba(255, 255, 255, 0.85);
     &:first-child {
       border-left: 2px solid rgba(255, 255, 255, 0.85);
     }
@@ -47,7 +49,7 @@ const WideNav = styled.nav`
       &:last-child {
         border-right: 0;
       }
-    }
+    } */
     a {
       color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
@@ -72,7 +74,7 @@ const WideNav = styled.nav`
 
 const NarrowNavContainer = styled.div`
   display: none;
-
+  padding: ${rhythm(0.67)} 0;
   @media screen and (max-width: 580px) {
     display: block;
   }

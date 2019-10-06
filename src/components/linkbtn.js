@@ -16,6 +16,7 @@ const LinkBtn = styled.a`
     color: white;
     font-weight: 700px;
     margin: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   }
   &:hover {
     background: #ffd600;

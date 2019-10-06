@@ -1,18 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import { rhythm } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 import LinkBtn from "../components/linkbtn"
 import Layout from "../components/layout"
 import Content from "../components/content"
 
 const LinkGrid = styled.div`
-  max-width: 960px;
   margin: 0 auto;
+  @media screen and (min-width: 960px) {
+    max-width: 960px;
+  }
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: ${rhythm(3.2)};
     grid-gap: 10px;
+    padding: 0 10px;
     a {
       margin: 0; /* so buttons aren't too spread out, unlike those inline */
     }
@@ -22,7 +26,7 @@ const LinkGrid = styled.div`
 const Links = props => (
   <LinkGrid>
     {props.links.map(link => (
-      <LinkBtn address={link.address} text={link.text} />
+      <LinkBtn address={link.address} text={link.text} key={link.text} />
     ))}
   </LinkGrid>
 )
